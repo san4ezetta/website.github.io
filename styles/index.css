@@ -1,0 +1,177 @@
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Шапка */
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+}
+
+.main-nav {
+    margin-top: 10px;
+    background-color: rgba(241, 132, 16, 0.11);
+    border-radius: 5px;
+
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #f5ad42;
+}
+
+/* Контейнер для макета */
+.layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 2px solid black;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 10px;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.content {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.video-container {
+    width: 100%;
+    /* Контейнер занимает всю ширину родителя */
+    padding-bottom: 56.25%;
+    /* Соотношение сторон 16:9 для видео */
+    position: relative;
+    margin: 20px auto;
+    /* Центрируем контейнер */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    /* Видео занимает 90% от ширины контейнера */
+    height: 100%;
+    margin: auto;
+    /* Центрируем iframe */
+    display: block;
+    border: 0;
+    /* Убираем границу у iframe */
+}
+
+.avatar {
+    float: right;
+    width: 150px;
+    margin: 0 0 10px 20px;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+
+
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a img {
+    width: 30px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+}

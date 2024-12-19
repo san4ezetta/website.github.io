@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles-adaptive.css">
+
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/ru/a/af/Valve_Deadlock_icon.png">
+
+    <!--<script src="../scripts/main.js" defer></script>-->
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/ru/a/af/Valve_Deadlock_icon.png" alt="Logo">
+        <p class="header-text" >Группа ЭФБО-03-23<br>Сливков Александр Александрович</p>
+    </div>
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="first-term.html">Первый семестр</a></li>
+            <li><a href="#">Второй семестр</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="#">Авторизация</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <aside class="sidebar">
+        <h4>Навигация по странице</h4>
+        <nav>
+            <ul class="sidebar-links">
+                <li><a href="#content-link">Виды услуг</a></li>
+                <li><a href="#card-info">Описание услуг</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="content" id="content-link">
+        <h1>Разработка веб-приложений</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://media.tenor.com/r-jNkp9QR3QAAAAe/deadlock-deadlock-meme.png" alt="Сайт визитка">
+                <p>Сайт визитка</p>
+                <button class="openModal">Заказать</button>
+            </div>
+            <div class="card">
+                <img src="https://media.tenor.com/r-jNkp9QR3QAAAAe/deadlock-deadlock-meme.png" alt="Корпоративный сайт">
+                <p>Корпоративный сайт</p>
+                <button class="openModal">Заказать</button>
+            </div>
+            <div class="card">
+                <img src="https://media.tenor.com/r-jNkp9QR3QAAAAe/deadlock-deadlock-meme.png" alt="Интернет магазин">
+                <p>Интернет магазин</p>
+                <button class="openModal">Заказать</button>
+            </div>
+        </div>
+        <p id="card-info">
+            Добавлено 6 новых героев в Hero Labs, новый экспериментальный режим подбора героев. Герои: Holliday, Calico, Wrecker, Fathom, Viper и Magician (временные имена). Цель этого режима — пригласить игроков помочь с обратной связью по дизайну героев на самых ранних стадиях разработки. Большинство героев в этом режиме будут с временными моделями, именами, эффектами и т.д. (за исключением более старых героев в разработке, у которых уже есть более проработанное искусство). Иногда у них будут временные/скопированные способности для некоторых слотов, если эта способность еще не определена (например, ультимейт у Magician). На форуме будет отдельный раздел Hero Labs для публикации обратной связи. Герои в этом режиме часто будут удаляться, способности изменяться, новые герои добавляться, удаленные герои возвращаться и т.д. Патчноты с изменениями для героев в этом режиме будут публиковаться в сабфоруме Hero Labs. Тестирование будет ограничено по времени, пока мы оцениваем активность, чтобы обеспечить более быстрое время ожидания в очереди. Для доступа к очереди нужно иметь минимум 50 сыгранных игр. Если вы не выбрали нового героя (так как новых героев меньше, чем игроков), то в следующих матчах вы будете иметь приоритет, чтобы получить нового героя из вашего списка.
+        </p>
+    </section>
+
+    <div class="modal" id="modal" aria-hidden="true" tabindex="-1">
+        <div class="modal-content">
+            <button id="close" class="modal-close">X</button>
+            <h2>Разработка веб-приложения</h2>
+            <p>Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+            <form id="modalForm">
+                <div class="form-group">
+                    <label for="name">Как вас зовут<br/></label>
+                    <input id="name" class="input" type="text" placeholder="Владислав Левенец" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ваш e-mail<br/></label>
+                    <input id="email" class="input" type="email" placeholder="mail@yahoo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон<br/></label>
+                    <input id="phone" class="input" type="tel" placeholder="78005555535" required pattern="^\7[1-9]{10}$">
+                </div>
+                <div class="form-group">
+                    <label for="country">Страна<br/></label>
+                    <select id="country" required>
+                        <option>Россия</option>
+                        <option>Кривой Рог</option>
+                        <option>Печатники</option>
+                        <option>Другая страна</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата<br/></label>
+                    <input id="date" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий<br/></label>
+                    <textarea id="comment" class="comment" placeholder="Ваш комментарий"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">Согласен на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; Сливков Александр Александрович, 2024</p>
+    <a id="backToTop" href="#">↑</a>
+    <div class="social-links">
+        <a href="https://www.google.com/search?q=Telegram"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png" alt="telega"></a>
+    </div>
+</footer>
+
+<script src="../scripts/script.js" defer></script>
+</body>
+</html>
